@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Management System</title>
+    <title>Vikram Hospital - Management System</title>
     <style>
         * {
             margin: 0;
@@ -150,7 +150,7 @@
 </head>
 <body>
     <div class="welcome-container">
-        <div class="logo">🏥</div>
+        <!-- <div class="logo">🏥</div> -->
         <h1>Hospital Management System</h1>
         <p class="subtitle">DBMS Lab Mini Project</p>
         
@@ -174,32 +174,32 @@
         </div>
         
         <a href="login.php" class="btn">
-            🔐 Login to Dashboard
+            Login to Dashboard
         </a>
         
         <div class="features">
             <div class="feature-item">
-                <h4>👨‍⚕️ Patients</h4>
+                <h4>Patients</h4>
                 <p>Manage Records</p>
             </div>
             <div class="feature-item">
-                <h4>🩺 Doctors</h4>
+                <h4>Doctors</h4>
                 <p>Staff Management</p>
             </div>
             <div class="feature-item">
-                <h4>📋 Reports</h4>
+                <h4>Reports</h4>
                 <p>Test Results</p>
             </div>
             <div class="feature-item">
-                <h4>💰 Bills</h4>
+                <h4>Bills</h4>
                 <p>Payment Tracking</p>
             </div>
             <div class="feature-item">
-                <h4>👩‍⚕️ Nurses</h4>
+                <h4>Nurses</h4>
                 <p>Staff Records</p>
             </div>
             <div class="feature-item">
-                <h4>📊 Analytics</h4>
+                <h4>Analytics</h4>
                 <p>Dashboard View</p>
             </div>
         </div>

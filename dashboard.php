@@ -13,7 +13,7 @@ $total_doctors = $conn->query("SELECT COUNT(*) as count FROM doctor")->fetch_ass
 $total_nurses = $conn->query("SELECT COUNT(*) as count FROM nurse")->fetch_assoc()['count'];
 $total_bills = $conn->query("SELECT COUNT(*) as count FROM bills")->fetch_assoc()['count'];
 $pending_bills = $conn->query("SELECT COUNT(*) as count FROM bills WHERE PaymentStatus='Pending'")->fetch_assoc()['count'];
-$total_revenue = $conn->query("SELECT SUM(Amount) as total FROM bills WHERE PaymentStatus='Paid'")->fetch_assoc()['total'];
+// $total_revenue = $conn->query("SELECT SUM(Amount) as total FROM bills WHERE PaymentStatus='Paid'")->fetch_assoc()['total'];
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +35,9 @@ $total_revenue = $conn->query("SELECT SUM(Amount) as total FROM bills WHERE Paym
         }
         
         .navbar {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+            background: #3c5defff;
+
             color: white;
             padding: 20px 40px;
             display: flex;
@@ -117,7 +119,7 @@ $total_revenue = $conn->query("SELECT SUM(Amount) as total FROM bills WHERE Paym
         .stat-card.doctors { border-left: 4px solid #2ecc71; }
         .stat-card.nurses { border-left: 4px solid #e74c3c; }
         .stat-card.bills { border-left: 4px solid #f39c12; }
-        .stat-card.revenue { border-left: 4px solid #9b59b6; }
+        /* .stat-card.revenue { border-left: 4px solid #9b59b6; } */
         
         .menu-grid {
             display: grid;
@@ -152,7 +154,7 @@ $total_revenue = $conn->query("SELECT SUM(Amount) as total FROM bills WHERE Paym
         }
         
         .menu-card p {
-            color: #666;
+            color: #4a4949ff;
             font-size: 14px;
         }
         
@@ -167,7 +169,7 @@ $total_revenue = $conn->query("SELECT SUM(Amount) as total FROM bills WHERE Paym
 </head>
 <body>
     <div class="navbar">
-        <h1>🏥 Hospital Management System</h1>
+        <h1>Vikram Hospital - Management System</h1>
         <div class="user-info">
             <span>Welcome, <?php echo $_SESSION['username']; ?></span>
             <a href="logout.php" class="logout-btn">Logout</a>
@@ -175,78 +177,85 @@ $total_revenue = $conn->query("SELECT SUM(Amount) as total FROM bills WHERE Paym
     </div>
     
     <div class="container">
-        <h2 class="section-title">📊 Dashboard Statistics</h2>
+        <h2 class="section-title">Dashboard Statistics</h2>
         
         <div class="stats-grid">
             <div class="stat-card patients">
-                <div class="icon">👨‍⚕️</div>
+                <!-- <div class="icon">👨‍⚕️</div> -->
                 <h3>Total Patients</h3>
                 <div class="number"><?php echo $total_patients; ?></div>
             </div>
             
             <div class="stat-card doctors">
-                <div class="icon">🩺</div>
+                <!-- <div class="icon">🩺</div> -->
                 <h3>Total Doctors</h3>
                 <div class="number"><?php echo $total_doctors; ?></div>
             </div>
             
             <div class="stat-card nurses">
-                <div class="icon">👩‍⚕️</div>
+                <!-- <div class="icon">👩‍⚕️</div> -->
                 <h3>Total Nurses</h3>
                 <div class="number"><?php echo $total_nurses; ?></div>
             </div>
             
             <div class="stat-card bills">
-                <div class="icon">💰</div>
+                <!-- <div class="icon">💰</div> -->
                 <h3>Pending Bills</h3>
                 <div class="number"><?php echo $pending_bills; ?></div>
             </div>
             
-            <div class="stat-card revenue">
-                <div class="icon">💵</div>
-                <h3>Total Revenue</h3>
-                <div class="number">₹<?php echo number_format($total_revenue, 2); ?></div>
-            </div>
+            <!-- <div class="stat-card revenue"> -->
+                <!-- <div class="icon">💵</div> -->
+                <!-- <h3>Total Revenue</h3> -->
+                <!-- <div class="number">₹<?php echo number_format($total_revenue, 2); ?></div> -->
+            <!-- </div> -->
         </div>
         
-        <h2 class="section-title">📋 Management Modules</h2>
+        <h2 class="section-title">Management Modules</h2>
         
         <div class="menu-grid">
             <a href="patients.php" class="menu-card">
-                <div class="icon">👨‍⚕️</div>
+                <!-- <div class="icon">👨‍⚕️</div> -->
                 <h3>Patients</h3>
                 <p>Manage patient records and information</p>
             </a>
             
             <a href="doctors.php" class="menu-card">
-                <div class="icon">🩺</div>
+                <!-- <div class="icon">🩺</div> -->
                 <h3>Doctors</h3>
                 <p>View and manage doctor details</p>
             </a>
             
             <a href="nurses.php" class="menu-card">
-                <div class="icon">👩‍⚕️</div>
+                <!-- <div class="icon">👩‍⚕️</div> -->
                 <h3>Nurses</h3>
                 <p>Manage nursing staff information</p>
             </a>
             
             <a href="consultations.php" class="menu-card">
-                <div class="icon">📋</div>
+                <!-- <div class="icon">📋</div> -->
                 <h3>Consultations</h3>
                 <p>Patient-Doctor consultation records</p>
             </a>
             
             <a href="test_reports.php" class="menu-card">
-                <div class="icon">🔬</div>
+                <!-- <div class="icon">🔬</div> -->
                 <h3>Test Reports</h3>
                 <p>Medical test reports and results</p>
             </a>
             
             <a href="bills.php" class="menu-card">
-                <div class="icon">💰</div>
+                <!-- <div class="icon">💰</div> -->
                 <h3>Bills & Payments</h3>
                 <p>Billing and payment management</p>
             </a>
+
+            <a href="advanced_queries.php" class="menu-card">
+                <!-- <div class="icon">💰</div> -->
+                <h3>Advanced Queries</h3>
+                <p>Run complex database queries</p>
+            </a>
+
         </div>
     </div>
 </body>

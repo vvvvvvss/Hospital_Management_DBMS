@@ -8,11 +8,14 @@ $sql = "SELECT t.*, p.Name as PatientName FROM test_report t
 $result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><title>Test Reports</title>
+<html><head><meta charset="UTF-8"><title>Test Reports - Vikram Hospital</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI'; background: #f5f6fa; }
-.navbar { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px 40px; display: flex; justify-content: space-between; }
+.navbar { 
+        /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);  */
+        background: #ef3cb6ff;
+        color: white; padding: 20px 40px; display: flex; justify-content: space-between; }
 .navbar h1 { font-size: 24px; }
 .back-btn { background: rgba(255,255,255,0.2); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; }
 .container { max-width: 1400px; margin: 30px auto; padding: 0 20px; }
@@ -22,7 +25,7 @@ th { background: #f8f9fa; color: #666; font-weight: 600; }
 tr:hover { background: #f8f9fa; }
 .test-badge { background: #fff3cd; color: #856404; padding: 5px 12px; border-radius: 15px; font-size: 12px; font-weight: 600; }
 </style></head><body>
-<div class="navbar"><h1>🔬 Test Reports</h1><a href="dashboard.php" class="back-btn">← Back</a></div>
+<div class="navbar"><h1>Test Reports</h1><a href="dashboard.php" class="back-btn">← Back</a></div>
 <div class="container"><h2 style="margin-bottom: 20px;">All Test Reports</h2>
 <table><thead><tr><th>Report ID</th><th>Patient Name</th><th>Test Type</th><th>Result</th><th>Test Date</th></tr></thead><tbody>
 <?php while($row = $result->fetch_assoc()): ?>

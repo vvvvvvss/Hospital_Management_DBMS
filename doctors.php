@@ -29,7 +29,9 @@ $result = $conn->query($sql);
         }
         
         .navbar {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+             */
+            background: #3fef3cff;
             color: white;
             padding: 20px 40px;
             display: flex;
@@ -87,7 +89,7 @@ $result = $conn->query($sql);
 </head>
 <body>
     <div class="navbar">
-        <h1>🩺 Doctor Management</h1>
+        <h1>Doctor Management - Vikram Hospital</h1>
         <a href="dashboard.php" class="back-btn">← Back to Dashboard</a>
     </div>
     

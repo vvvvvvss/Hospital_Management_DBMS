@@ -175,7 +175,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <div class="login-container">
-        <div class="logo">🔐</div>
+        <!-- <div class="logo">🔐</div> -->
         <h2>Admin Login</h2>
         <p class="subtitle">Hospital Management System</p>
         

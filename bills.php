@@ -21,7 +21,7 @@ $patients = $conn->query("SELECT PID, Name FROM patient ORDER BY Name");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bills - Hospital Management</title>
+    <title>Bills - Vikram Hospital</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -31,7 +31,8 @@ $patients = $conn->query("SELECT PID, Name FROM patient ORDER BY Name");
         }
         
         .navbar {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+            background: #efb03cff;
             color: white;
             padding: 20px 40px;
             display: flex;
@@ -104,7 +105,7 @@ $patients = $conn->query("SELECT PID, Name FROM patient ORDER BY Name");
 </head>
 <body>
     <div class="navbar">
-        <h1>💰 Bills & Payments</h1>
+        <h1>Bills & Payments</h1>
         <a href="dashboard.php" class="back-btn">← Back to Dashboard</a>
     </div>
     

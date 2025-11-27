@@ -50,7 +50,7 @@ $result = $conn->query("SELECT * FROM patient ORDER BY PID DESC");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patients - Hospital Management</title>
+    <title>Patients - Vikram Hospital</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -60,7 +60,8 @@ $result = $conn->query("SELECT * FROM patient ORDER BY PID DESC");
         }
         
         .navbar {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+            background: #3cceefff;
             color: white;
             padding: 20px 40px;
             display: flex;
@@ -97,7 +98,7 @@ $result = $conn->query("SELECT * FROM patient ORDER BY PID DESC");
         }
         
         .btn-add {
-            background: #667eea;
+            background: #3cceefff;
             color: white;
             padding: 12px 30px;
             border: none;
@@ -196,7 +197,7 @@ $result = $conn->query("SELECT * FROM patient ORDER BY PID DESC");
 </head>
 <body>
     <div class="navbar">
-        <h1>👨‍⚕️ Patient Management</h1>
+        <h1>Patient Management</h1>
         <a href="dashboard.php" class="back-btn">← Back to Dashboard</a>
     </div>
     
@@ -206,7 +207,7 @@ $result = $conn->query("SELECT * FROM patient ORDER BY PID DESC");
         <?php endif; ?>
         
         <button class="btn-add" onclick="toggleForm()">
-            <?php echo $edit_patient ? '✏️ Edit Patient' : '➕ Add New Patient'; ?>
+            <?php echo $edit_patient ? 'Edit Patient' : 'Add New Patient'; ?>
         </button>
         
         <div class="form-card" id="patientForm" style="display: <?php echo $edit_patient ? 'block' : 'none'; ?>;">
@@ -247,7 +248,7 @@ $result = $conn->query("SELECT * FROM patient ORDER BY PID DESC");
                 </div>
                 
                 <button type="submit" class="btn-primary">
-                    <?php echo $edit_patient ? '💾 Update' : '💾 Save'; ?>
+                    <?php echo $edit_patient ? 'Update' : 'Save'; ?>
                 </button>
                 <?php if ($edit_patient): ?>
                     <a href="patients.php" class="btn-secondary">Cancel</a>
